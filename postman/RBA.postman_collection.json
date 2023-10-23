@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "58818356-8ba9-48f7-9214-25fe3676c3ab",
+		"name": "RBA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "28026021"
+	},
+	"item": [
+		{
+			"name": "Search Client",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9017/covid-statistics/statistics?country=Croatia&dateFrom=2022-01-01&dateTo=2022-02-02",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9017",
+					"path": [
+						"covid-statistics",
+						"statistics"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "Croatia"
+						},
+						{
+							"key": "dateFrom",
+							"value": "2022-01-01"
+						},
+						{
+							"key": "dateTo",
+							"value": "2022-02-02"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"correlationId\": \"ime\",\r\n  \"firstName\": \"prezime\",\r\n  \"identificationNumber\": 123213213214,\r\n  \"lastName\": \"string\",\r\n  \"transparentData\": {\r\n    \"additionalProp1\": \"string\",\r\n    \"additionalProp2\": \"string\",\r\n    \"additionalProp3\": \"string\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9017/rba/client"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Client",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9017/rba/client?oib=123213213214",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9017",
+					"path": [
+						"rba",
+						"client"
+					],
+					"query": [
+						{
+							"key": "oib",
+							"value": "123213213214"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "x-rapidapi-host",
+			"value": "covid-193.p.rapidapi.com",
+			"type": "string"
+		},
+		{
+			"key": "x-rapidapi-key",
+			"value": "cfa175a786mshb2b747bdc65bf35p1723f0jsn20ebc1cdec4e",
+			"type": "string"
+		}
+	]
+}
