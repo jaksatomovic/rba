@@ -1,6 +1,6 @@
 # RBA APP
 
-Exercise application with client registration with creation of file representing card creation
+Exercise application with client csv generating
 Fetch them by:
 - identification number (oib) (required fields)
 Delete them by:
@@ -12,7 +12,7 @@ Create them by:
 
 ## API
 
-In order to test application easy we have swagger-ui and postman collections (one for rapid api and one for application itself).
+In order to test application easy we have swagger-ui and postman collections 
 
 | File                                                   | PATH                                                    |
 |--------------------------------------------------------|---------------------------------------------------------|
